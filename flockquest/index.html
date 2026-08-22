@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FlockQuest — Protect the Flock</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@550;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="brand">
+      <p class="brand-mark">FlockQuest</p>
+      <h1>Protect the Flock</h1>
+      <p class="tagline">Spend a small budget to help Azure Warblers nest — without losing the neighbors.</p>
+    </div>
+    <div class="goals" role="group" aria-label="Conservation goals">
+      <div class="goal" data-goal="nest">
+        <span class="goal-label">Nest success</span>
+        <span class="goal-target">≥ 70</span>
+        <span class="goal-value" id="goalNest">—</span>
+        <span class="goal-badge" id="badgeNest">?</span>
+      </div>
+      <div class="goal" data-goal="conflict">
+        <span class="goal-label">Neighbor peace</span>
+        <span class="goal-target">≤ Medium</span>
+        <span class="goal-value" id="goalConflict">—</span>
+        <span class="goal-badge" id="badgeConflict">?</span>
+      </div>
+      <div class="goal" data-goal="budget">
+        <span class="goal-label">Budget</span>
+        <span class="goal-target">Stay ≤ $100</span>
+        <span class="goal-value" id="goalBudget">—</span>
+        <span class="goal-badge" id="badgeBudget">?</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel plan" aria-labelledby="plan-heading">
+      <div class="panel-head">
+        <h2 id="plan-heading">Your conservation plan</h2>
+        <p>Turn actions on or off. Watch nest success, neighbor feelings, and money change.</p>
+      </div>
+
+      <div class="presets">
+        <span class="presets-label">Start from a strategy:</span>
+        <button type="button" class="preset" data-preset="habitat">Habitat first</button>
+        <button type="button" class="preset" data-preset="people">People first</button>
+        <button type="button" class="preset" data-preset="balanced">Balanced</button>
+        <button type="button" class="preset preset-ghost" data-preset="clear">Clear</button>
+      </div>
+
+      <div class="actions" id="actions"></div>
+
+      <div class="event-box">
+        <h3>What if…?</h3>
+        <p id="eventDesc">Pick an event to stress-test your plan.</p>
+        <div class="event-actions">
+          <button type="button" class="event-btn" data-event="none">Calm season</button>
+          <button type="button" class="event-btn" data-event="heat">Heat wave</button>
+          <button type="button" class="event-btn" data-event="freeze">Late freeze</button>
+          <button type="button" class="event-btn" data-event="bias">Bad survey data</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel results" aria-labelledby="results-heading">
+      <div class="panel-head">
+        <h2 id="results-heading">Results</h2>
+        <p id="whyLine">Build a plan to see what happens.</p>
+      </div>
+
+      <dl class="stats">
+        <div>
+          <dt>Nest success</dt>
+          <dd id="statNest">—</dd>
+        </div>
+        <div>
+          <dt>Neighbor peace</dt>
+          <dd id="statConflict">—</dd>
+        </div>
+        <div>
+          <dt>Money spent</dt>
+          <dd id="statSpent">—</dd>
+        </div>
+        <div>
+          <dt>Money left</dt>
+          <dd id="statLeft">—</dd>
+        </div>
+      </dl>
+
+      <div class="meter" aria-hidden="true">
+        <div class="meter-label">Nest success toward 70</div>
+        <div class="meter-track">
+          <div class="meter-fill" id="meterFill"></div>
+          <div class="meter-mark"></div>
+        </div>
+      </div>
+
+      <div class="run-actions">
+        <label class="run-name">
+          <span>Name this run</span>
+          <input type="text" id="runName" maxlength="28" placeholder="e.g. Habitat first" />
+        </label>
+        <button type="button" class="primary" id="saveRun">Save this run</button>
+      </div>
+
+      <div class="history">
+        <h3>Saved runs (for debate)</h3>
+        <p class="hint">Save two strategies, then compare with evidence.</p>
+        <div class="history-grid" id="historyGrid">
+          <p class="empty" id="historyEmpty">No runs saved yet.</p>
+        </div>
+        <button type="button" class="preset-ghost" id="clearHistory" hidden>Clear saved runs</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Class tip: Hitting nest success alone isn’t enough — neighbors and budget count too. Defend your trade-offs with numbers.</p>
+  </footer>
+
+  <script src="sim.js"></script>
+</body>
+</html>

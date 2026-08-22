@@ -1,0 +1,476 @@
+:root {
+  --ink: #1c2a22;
+  --ink-soft: #3d5248;
+  --panel: rgba(247, 250, 246, 0.92);
+  --line: rgba(28, 42, 34, 0.12);
+  --moss: #2f6b4f;
+  --moss-deep: #1f4a37;
+  --sun: #c47a1a;
+  --pass: #1b7f4a;
+  --fail: #a33b2a;
+  --shadow: 0 16px 44px rgba(12, 28, 20, 0.2);
+  --radius: 18px;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-ui: "Nunito", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  background: #1a2e26;
+  line-height: 1.45;
+}
+
+.sky {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 70% 45% at 80% 0%, rgba(196, 122, 26, 0.35), transparent 55%),
+    radial-gradient(ellipse 55% 40% at 10% 15%, rgba(140, 190, 170, 0.35), transparent 50%),
+    linear-gradient(180deg, #3d6b5c 0%, #243f35 45%, #152820 100%);
+}
+
+.sky::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 38%;
+  background:
+    linear-gradient(to top, rgba(21, 40, 32, 0.95), transparent),
+    repeating-linear-gradient(
+      100deg,
+      transparent 0 26px,
+      rgba(247, 250, 246, 0.035) 26px 28px
+    );
+  pointer-events: none;
+}
+
+.top,
+.layout,
+.foot {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.top {
+  padding: 1.6rem 0 1rem;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.brand-mark {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  letter-spacing: -0.03em;
+  color: #f4f7f2;
+}
+
+.brand h1 {
+  margin: 0.2rem 0 0.35rem;
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #f0c57a;
+}
+
+.tagline {
+  margin: 0;
+  max-width: 36rem;
+  color: rgba(244, 247, 242, 0.9);
+}
+
+.goals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.goal {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  display: grid;
+  gap: 0.15rem;
+  box-shadow: var(--shadow);
+}
+
+.goal.is-pass {
+  border-color: rgba(27, 127, 74, 0.45);
+}
+
+.goal.is-fail {
+  border-color: rgba(163, 59, 42, 0.4);
+}
+
+.goal-label {
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.goal-target {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.goal-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.goal-badge {
+  justify-self: start;
+  margin-top: 0.25rem;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #e4ece6;
+  color: var(--ink-soft);
+}
+
+.goal.is-pass .goal-badge {
+  background: rgba(27, 127, 74, 0.15);
+  color: var(--pass);
+}
+
+.goal.is-fail .goal-badge {
+  background: rgba(163, 59, 42, 0.12);
+  color: var(--fail);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 4px);
+  padding: 1.15rem 1.2rem 1.35rem;
+  box-shadow: var(--shadow);
+}
+
+.panel-head h2,
+.event-box h3,
+.history h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+
+.panel-head p,
+.hint,
+.event-box p {
+  margin: 0.35rem 0 0;
+  color: var(--ink-soft);
+}
+
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 1rem 0 1.1rem;
+}
+
+.presets-label {
+  font-weight: 800;
+  font-size: 0.9rem;
+  margin-right: 0.2rem;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.preset,
+.event-btn {
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.preset:hover,
+.event-btn:hover,
+.primary:hover {
+  transform: translateY(-1px);
+}
+
+.preset.is-active,
+.event-btn.is-active {
+  background: var(--moss);
+  border-color: var(--moss);
+  color: #fff;
+}
+
+.preset-ghost {
+  background: transparent;
+}
+
+.actions {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.action {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.8rem 0.9rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--line);
+}
+
+.action input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.2rem;
+  accent-color: var(--moss);
+}
+
+.action-name {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.action-help {
+  margin: 0.2rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.action-cost {
+  font-family: var(--font-display);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.event-box {
+  margin-top: 1.15rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.7rem;
+}
+
+.stats {
+  margin: 1rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+.stats > div {
+  padding: 0.7rem 0.8rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--line);
+}
+
+.stats dt {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--ink-soft);
+}
+
+.stats dd {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.meter {
+  margin-top: 1rem;
+}
+
+.meter-label {
+  font-weight: 800;
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+}
+
+.meter-track {
+  position: relative;
+  height: 14px;
+  border-radius: 999px;
+  background: #dce6df;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--moss), #4a9a72);
+  transition: width 0.35s ease;
+}
+
+.meter-fill.is-low {
+  background: linear-gradient(90deg, #b45309, #a33b2a);
+}
+
+.meter-mark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 70%;
+  width: 2px;
+  background: rgba(28, 42, 34, 0.55);
+}
+
+.run-actions {
+  margin-top: 1.15rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.run-name {
+  display: grid;
+  gap: 0.3rem;
+  font-weight: 800;
+  font-size: 0.88rem;
+}
+
+.run-name input {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.primary {
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  background: var(--sun);
+  color: #fff;
+  border: 1px solid var(--sun);
+  box-shadow: 0 8px 20px rgba(196, 122, 26, 0.28);
+}
+
+.history {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.history-grid {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.history-card {
+  padding: 0.75rem 0.85rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  animation: rise 0.35s ease;
+}
+
+.history-card h4 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+}
+
+.history-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.15rem;
+  font-size: 0.92rem;
+}
+
+.history-card .passes {
+  margin-top: 0.4rem;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.empty {
+  margin: 0;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+#clearHistory {
+  margin-top: 0.75rem;
+}
+
+.foot {
+  padding: 0 0 2rem;
+  color: rgba(244, 247, 242, 0.85);
+  font-size: 0.95rem;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 860px) {
+  .goals,
+  .layout,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .action {
+    grid-template-columns: auto 1fr;
+  }
+
+  .action-cost {
+    grid-column: 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
