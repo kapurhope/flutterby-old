@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Beak Score Sheet — Module 1</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 0.55in;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: #1c2a22;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 11.5pt;
+      line-height: 1.35;
+    }
+
+    h1 {
+      margin: 0 0 0.15rem;
+      font-size: 20pt;
+      letter-spacing: -0.02em;
+    }
+
+    .kicker {
+      margin: 0 0 0.35rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #2f6b4f;
+    }
+
+    .meta-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 0.7rem 0 0.85rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.5pt;
+    }
+
+    .meta-row label {
+      display: flex;
+      gap: 0.35rem;
+      align-items: baseline;
+      min-width: 30%;
+      flex: 1;
+    }
+
+    .line {
+      flex: 1;
+      border-bottom: 1px solid #1c2a22;
+      min-width: 4rem;
+      height: 1.1em;
+    }
+
+    .instructions {
+      border: 1.5px solid #2f6b4f;
+      background: #f3f7f4;
+      padding: 0.55rem 0.7rem;
+      margin: 0 0 0.85rem;
+      border-radius: 4px;
+    }
+
+    .instructions h2 {
+      margin: 0 0 0.35rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.5pt;
+      color: #1f4a37;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .instructions ol {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    .instructions li {
+      margin: 0.15rem 0;
+    }
+
+    .warning {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9.5pt;
+      font-weight: 700;
+      margin-top: 0.35rem;
+    }
+
+    h3 {
+      margin: 0.75rem 0 0.35rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11.5pt;
+      color: #1f4a37;
+    }
+
+    .round-note {
+      margin: 0 0 0.35rem;
+      font-size: 10pt;
+      color: #3d5248;
+      font-style: italic;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 0.15rem;
+    }
+
+    th, td {
+      border: 1px solid #1c2a22;
+      padding: 0.38rem 0.5rem;
+      text-align: left;
+    }
+
+    th {
+      background: #dfece6;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+      width: 70%;
+    }
+
+    td.count {
+      width: 30%;
+      height: 1.55rem;
+    }
+
+    tr.total td {
+      font-weight: 700;
+      background: #f7faf6;
+    }
+
+    .reflect {
+      margin-top: 0.85rem;
+      border-top: 1.5px solid #1c2a22;
+      padding-top: 0.55rem;
+    }
+
+    .reflect h3 {
+      margin-top: 0;
+    }
+
+    .blank {
+      margin: 0.55rem 0;
+    }
+
+    .blank .fill {
+      display: inline-block;
+      border-bottom: 1px solid #1c2a22;
+      min-width: 12rem;
+      height: 1em;
+      vertical-align: baseline;
+    }
+
+    .blank .fill.wide {
+      min-width: 100%;
+      display: block;
+      margin-top: 0.35rem;
+      height: 1.35em;
+    }
+
+    .footer {
+      margin-top: 0.7rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8.5pt;
+      color: #3d5248;
+    }
+  </style>
+</head>
+<body>
+  <p class="kicker">Flutterby Field School · Module 1 · Hands-on</p>
+  <h1>Beak Score Sheet</h1>
+
+  <div class="meta-row">
+    <label>Names <span class="line"></span></label>
+    <label>Beak tool <span class="line"></span></label>
+    <label>Period <span class="line"></span></label>
+  </div>
+
+  <section class="instructions">
+    <h2>Instructions</h2>
+    <ol>
+      <li>Your team gets <strong>one beak tool</strong> (spoon, fork, chopsticks, clothespin, tweezers, or cup).</li>
+      <li>For each round, you have <strong>30 seconds</strong> to collect as much “food” as you can.</li>
+      <li>Count the pieces and write the numbers in the tables below.</li>
+      <li>After all three rounds, complete the reflection sentences.</li>
+    </ol>
+    <p class="warning">Do not eat the props. Food pieces are for the lab only.</p>
+  </section>
+
+  <h3>Round A — Normal year</h3>
+  <p class="round-note">All food types are available. Collect for 30 seconds, then count.</p>
+  <table>
+    <thead>
+      <tr><th>Food type</th><th>Count</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Seeds</td><td class="count"></td></tr>
+      <tr><td>Worms</td><td class="count"></td></tr>
+      <tr><td>Soft fruit</td><td class="count"></td></tr>
+      <tr><td>Floating food</td><td class="count"></td></tr>
+      <tr class="total"><td>Total</td><td class="count"></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Round B — Drought</h3>
+  <p class="round-note">Only large seeds remain. Collect for 30 seconds, then count.</p>
+  <table>
+    <thead>
+      <tr><th>Food type</th><th>Count</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Large seeds</td><td class="count"></td></tr>
+      <tr class="total"><td>Total</td><td class="count"></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Round C — Flood</h3>
+  <p class="round-note">Most food is floating. Use the water tray only. Collect for 30 seconds, then count.</p>
+  <table>
+    <thead>
+      <tr><th>Food type</th><th>Count</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Floating food</td><td class="count"></td></tr>
+      <tr class="total"><td>Total</td><td class="count"></td></tr>
+    </tbody>
+  </table>
+
+  <section class="reflect">
+    <h3>Reflection</h3>
+    <p class="blank">Our beak was best when <span class="fill"></span> because <span class="fill"></span>.</p>
+    <p class="blank">One trade-off we noticed:<span class="fill wide"></span></p>
+  </section>
+
+  <p class="footer">Flutterby Field School · Build the Best Bird Beak · Keep this sheet for Module 2 (Teach the Computer).</p>
+</body>
+</html>

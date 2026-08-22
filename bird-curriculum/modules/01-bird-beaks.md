@@ -24,7 +24,7 @@
 1. Assign each team one beak (fairness > choice).  
 2. 30 seconds: collect as much as you can of **one food type**, then rotate foods or run separate timed trials.  
 3. Simpler version: one mixed pile; count pieces by type after 30s.  
-4. Record on `handouts/beak-score-sheet.md`.
+4. Record on `handouts/beak-score-sheet.pdf`.
 
 ### Round B — Drought (6 min)
 “Only large seeds remain.” Remove worms/fruit/floating food; leave large beans only. Repeat 30s. Record.
