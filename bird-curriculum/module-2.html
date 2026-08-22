@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 2 — Teach the Computer · Flutterby Field School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@550;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="lesson.css" />
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html">All modules</a>
+      <a href="module-1.html">1 Beaks</a>
+      <a class="current" href="module-2.html">2 Computer</a>
+      <a href="module-3.html">3 Food web</a>
+      <a href="module-4.html">4 Habitat</a>
+      <a href="module-5.html">5 Data lies</a>
+      <a href="module-6.html">6 Flock</a>
+    </nav>
+
+    <header class="hero">
+      <p class="kicker">Module 2 of 6</p>
+      <h1>Teach the Computer Which Beak Wins</h1>
+      <p class="lede">You already made a dataset. Now you <em>are</em> the AI — writing rules a computer could follow.</p>
+      <div class="meta">
+        <span class="pill optional">Computer optional</span>
+        <span class="pill">45–55 min</span>
+        <span class="pill">Uses Module 1 data</span>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Objectives</h2>
+      <ul class="objectives">
+        <li>Find patterns that predict a good <strong>habitat</strong> from beak performance.</li>
+        <li>Predict habitats for mystery birds.</li>
+        <li>Notice useless features (noise) and wrong predictions.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Materials</h2>
+      <ul>
+        <li>Class data from Module 1 <em>or</em> the sample table below</li>
+        <li><a href="handouts/rule-card.md">Rule card</a> and <a href="handouts/mystery-birds.md">mystery bird cards</a></li>
+        <li>Optional: projector or shared spreadsheet to show the table</li>
+      </ul>
+      <p>The “AI” is still the students’ rules — devices only help display data.</p>
+    </section>
+
+    <section class="card">
+      <h2>Instructions</h2>
+      <p class="hook">“You already made a dataset. Now you are the AI.”</p>
+
+      <h3>Step 1 — Pattern hunt (12 min)</h3>
+      <p>Ask: “If you were a computer, what <strong>rule</strong> predicts habitat?” Example: <em>If Water score ≥ 18 → Wetland; else Forest.</em></p>
+      <table>
+        <thead>
+          <tr><th>Beak</th><th>Seed</th><th>Worm</th><th>Fruit</th><th>Water</th><th>Best habitat</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Spoon</td><td>18</td><td>4</td><td>12</td><td>20</td><td>Wetland</td></tr>
+          <tr><td>Tongs</td><td>12</td><td>19</td><td>15</td><td>5</td><td>Forest</td></tr>
+          <tr><td>Fork</td><td>7</td><td>21</td><td>8</td><td>3</td><td>Forest</td></tr>
+          <tr><td>Tweezers</td><td>4</td><td>17</td><td>10</td><td>2</td><td>Forest</td></tr>
+          <tr><td>Cup</td><td>20</td><td>2</td><td>5</td><td>25</td><td>Wetland</td></tr>
+          <tr><td>Chopsticks</td><td>8</td><td>16</td><td>9</td><td>4</td><td>Forest</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Step 2 — Mystery birds (10 min)</h3>
+      <p>Groups predict Wetland or Forest; class votes; then reveal answers.</p>
+
+      <h3>Step 3 — Choose features (10 min)</h3>
+      <p>Board list: beak length, width, <strong>beak color</strong>, wing length, seed/worm scores, temperature…</p>
+      <p>Ask which you’d give an AI — and which is probably useless. Push: color is often <strong>noise</strong>.</p>
+
+      <h3>Step 4 — Bad AI (10 min)</h3>
+      <p>Show a model that picks Wetland because a bird is “pretty/blue,” or a bird that breaks their rule because of a <strong>hidden factor</strong> (nesting sites).</p>
+      <p>Ask: “Did the AI fail, or did we train it with the wrong idea?”</p>
+
+      <h3>Wrap (5 min)</h3>
+      <p>Exit ticket: “One thing AI needs from us is ___.”</p>
+    </section>
+
+    <section class="card">
+      <h2>Differentiation &amp; assessment</h2>
+      <p><strong>5th–6th:</strong> one rule + oral trick discussion. · <strong>7th–8th:</strong> feature / training / prediction; score how many mystery birds they got right.</p>
+      <p><strong>Assess:</strong> rule card + 3 predictions + one sentence on a miss.</p>
+    </section>
+
+    <nav class="pager">
+      <a href="module-1.html">← Module 1</a>
+      <a href="module-3.html">Next: Food web →</a>
+    </nav>
+  </div>
+</body>
+</html>

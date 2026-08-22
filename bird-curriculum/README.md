@@ -76,10 +76,26 @@
 
 ---
 
+## Web lesson pages (GitHub Pages)
+
+Hub: https://kapurhope.github.io/flutterby/bird-curriculum/
+
+| Module | Page |
+|--------|------|
+| Hub | `index.html` |
+| 1 Beaks | `module-1.html` |
+| 2 Teach the computer | `module-2.html` |
+| 3 Food web | `module-3.html` |
+| 4 Habitat detective | `module-4.html` |
+| 5 When data lies | `module-5.html` |
+| 6 Protect the Flock | `module-6.html` → links to FlockQuest |
+
+Markdown under `modules/` and `handouts/` remains the printable/source version.
+
 ## Folder map
 
 ```text
-bird-curriculum/     ← lessons + handouts
+bird-curriculum/     ← web lessons + markdown + handouts
 flockquest/          ← Module 6 trade-off website
 powerquest/          ← optional sister energy sim
 ```
