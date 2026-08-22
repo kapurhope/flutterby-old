@@ -7,7 +7,7 @@ Paper portfolios get static fast. FlockQuest lets pairs flip actions, watch nest
 ## Prep
 - Open `flockquest/index.html` locally, or after Pages: `https://kapurhope.github.io/flutterby/flockquest/`
 - Projector for intro; student devices in pairs (or stations)
-- Optional print: `handouts/capstone-scorecard.md` for offline notes during debate
+- Optional print: `handouts/capstone-scorecard.pdf` for offline notes during debate
 
 ## Goals on the board (match the site)
 1. Nest success ≥ **70**  

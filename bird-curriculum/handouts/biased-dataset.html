@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Biased Dataset — Module 5</title>
+  <style>
+    @page { size: letter; margin: 0.55in; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #1c2a22; font-family: Georgia, "Times New Roman", serif; font-size: 11pt; line-height: 1.35; }
+    .kicker { margin: 0 0 0.25rem; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #2f6b4f; }
+    h1 { margin: 0 0 0.35rem; font-size: 18pt; }
+    .box { border: 1.5px solid #2f6b4f; background: #f3f7f4; padding: 0.5rem 0.65rem; margin: 0 0 0.65rem; }
+    .box h2 { margin: 0 0 0.25rem; font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color: #1f4a37; text-transform: uppercase; letter-spacing: 0.04em; }
+    h3 { margin: 0.75rem 0 0.3rem; font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #1f4a37; }
+    table { width: 100%; border-collapse: collapse; margin-top: 0.25rem; font-size: 10.5pt; }
+    th, td { border: 1px solid #1c2a22; padding: 0.32rem 0.4rem; text-align: left; }
+    th { background: #dfece6; font-family: Arial, Helvetica, sans-serif; font-size: 9.5pt; }
+    .write { border-bottom: 1px solid #1c2a22; min-height: 1.25em; margin: 0.35rem 0; }
+    .page-break { page-break-before: always; }
+    .footer { margin-top: 0.55rem; font-family: Arial, Helvetica, sans-serif; font-size: 8.5pt; color: #3d5248; }
+  </style>
+</head>
+<body>
+  <p class="kicker">Flutterby Field School · Module 5 · Student sheet</p>
+  <h1>When Data Lies — Biased Dataset</h1>
+  <p><strong>Warning:</strong> Almost every “Yes” nest came from <strong>Riverside Park</strong> surveys. Farm and city sites were barely checked.</p>
+
+  <div class="box">
+    <h2>Instructions</h2>
+    <ol style="margin:0;padding-left:1.15rem;">
+      <li>Build a prediction rule from this table (as if you were training an AI).</li>
+      <li>Ask: would this rule work for the <em>whole region</em>?</li>
+      <li>Answer the discussion prompts. Then talk about how to fix the study.</li>
+    </ol>
+  </div>
+
+  <table>
+    <thead><tr><th>Site</th><th>Region</th><th>Trees</th><th>Near river?</th><th>Playground nearby?</th><th>Nest?</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Riverside Park</td><td>High</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>2</td><td>Riverside Park</td><td>High</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>3</td><td>Riverside Park</td><td>High</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>4</td><td>Riverside Park</td><td>High</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+      <tr><td>5</td><td>Riverside Park</td><td>Medium</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>6</td><td>Riverside Park</td><td>High</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+      <tr><td>7</td><td>Farm valley</td><td>Medium</td><td>No</td><td>No</td><td>?</td></tr>
+      <tr><td>8</td><td>Downtown</td><td>Low</td><td>No</td><td>Yes</td><td>No</td></tr>
+      <tr><td>9</td><td>Oak hills</td><td>High</td><td>No</td><td>No</td><td>?</td></tr>
+      <tr><td>10</td><td>Riverside Park</td><td>High</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Our (possibly biased) rule</h3>
+  <p class="write"></p>
+
+  <h3>Discussion</h3>
+  <p>1. What silly rule might an AI learn?</p>
+  <p class="write"></p>
+  <p>2. Why would that rule fail in Oak hills?</p>
+  <p class="write"></p>
+  <p>3. How would you redesign the study?</p>
+  <p class="write"></p>
+  <p class="footer">Student side — teacher reveal on page 2</p>
+
+  <div class="page-break">
+    <p class="kicker">Teacher reveal</p>
+    <h1>What the “?” sites really were</h1>
+    <table>
+      <thead><tr><th>Site</th><th>Region</th><th>Actual nest?</th><th>Point</th></tr></thead>
+      <tbody>
+        <tr><td>7</td><td>Farm valley</td><td>Yes</td><td>Not surveyed well — model may miss real nests.</td></tr>
+        <tr><td>9</td><td>Oak hills</td><td>Yes</td><td>No river/playground — breaks a Riverside-only rule.</td></tr>
+      </tbody>
+    </table>
+    <h3>Fix ideas (after students struggle)</h3>
+    <ul>
+      <li>Sample <strong>many regions</strong>, not one favorite park.</li>
+      <li>Drop features that don’t make biological sense until tested.</li>
+      <li>Keep humans reviewing surprising predictions.</li>
+    </ul>
+    <p><strong>Land this line:</strong> AI doesn’t know what’s true. It finds patterns in what we gave it.</p>
+    <p class="footer">Flutterby Field School · When Data Lies</p>
+  </div>
+</body>
+</html>

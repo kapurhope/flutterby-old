@@ -1,5 +1,5 @@
 # Module 4 — Habitat Detective: Where Do Songbirds Nest?
-**Time:** 45–55 min · **Mode:** Computer optional · **Handout:** `handouts/habitat-dataset.md`
+**Time:** 45–55 min · **Mode:** Computer optional · **Handout:** `handouts/habitat-dataset.pdf`
 
 Print the table, or project / share a doc so the class votes on mystery sites together.
 

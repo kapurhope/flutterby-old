@@ -1,5 +1,5 @@
 # Module 3 — Pull the String: Bird Food Web
-**Time:** 40–50 min · **Mode:** Hands-on · **Supplies:** yarn, organism cards (`handouts/food-web-cards.md`)
+**Time:** 40–50 min · **Mode:** Hands-on · **Supplies:** yarn, organism cards (`handouts/food-web-cards.pdf`)
 
 ## Hook (2 min)
 “If one bird disappears, who feels it?”

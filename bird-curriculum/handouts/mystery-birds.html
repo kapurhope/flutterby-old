@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mystery Birds — Module 2</title>
+  <style>
+    @page { size: letter; margin: 0.5in; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #1c2a22; font-family: Georgia, "Times New Roman", serif; font-size: 11pt; line-height: 1.35; }
+    .kicker { margin: 0 0 0.25rem; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #2f6b4f; }
+    h1 { margin: 0 0 0.4rem; font-size: 18pt; }
+    .box { border: 1.5px solid #2f6b4f; background: #f3f7f4; padding: 0.5rem 0.65rem; margin: 0 0 0.75rem; }
+    .box h2 { margin: 0 0 0.25rem; font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color: #1f4a37; text-transform: uppercase; letter-spacing: 0.04em; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; }
+    .card { border: 1.5px solid #1c2a22; border-radius: 6px; padding: 0.55rem 0.65rem; min-height: 2.8in; break-inside: avoid; }
+    .card h3 { margin: 0 0 0.35rem; font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #1f4a37; }
+    .card ul { margin: 0.2rem 0 0.5rem; padding-left: 1.1rem; }
+    .predict { margin-top: auto; font-family: Arial, Helvetica, sans-serif; font-size: 10.5pt; font-weight: 700; border-top: 1px dashed #3d5248; padding-top: 0.4rem; }
+    .page-break { page-break-before: always; }
+    table { width: 100%; border-collapse: collapse; margin-top: 0.4rem; }
+    th, td { border: 1px solid #1c2a22; padding: 0.4rem; text-align: left; }
+    th { background: #dfece6; font-family: Arial, Helvetica, sans-serif; font-size: 10pt; }
+    .footer { margin-top: 0.6rem; font-family: Arial, Helvetica, sans-serif; font-size: 8.5pt; color: #3d5248; }
+  </style>
+</head>
+<body>
+  <p class="kicker">Flutterby Field School · Module 2 · Student cards</p>
+  <h1>Mystery Birds</h1>
+  <div class="box">
+    <h2>Instructions</h2>
+    <p style="margin:0;">Cut along the card borders (or fold and hand out). Use your rule to predict <strong>Wetland</strong> or <strong>Forest</strong>. Do <em>not</em> look at the teacher answer key on page 2.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Bird 1 — “Reed Sipper”</h3>
+      <ul>
+        <li>Seed efficiency: <strong>high</strong></li>
+        <li>Worm efficiency: <strong>low</strong></li>
+        <li>Water-food efficiency: <strong>high</strong></li>
+        <li>Beak: wide &amp; scoop-like</li>
+      </ul>
+      <p class="predict">Predict habitat: Wetland or Forest?</p>
+    </div>
+    <div class="card">
+      <h3>Bird 2 — “Needle Bill”</h3>
+      <ul>
+        <li>Seed: <strong>low</strong></li>
+        <li>Worm: <strong>high</strong></li>
+        <li>Water-food: <strong>low</strong></li>
+        <li>Beak: long &amp; thin</li>
+      </ul>
+      <p class="predict">Predict habitat: Wetland or Forest?</p>
+    </div>
+    <div class="card">
+      <h3>Bird 3 — “Blue Jewel”</h3>
+      <ul>
+        <li>Seed: <strong>low</strong></li>
+        <li>Worm: <strong>high</strong></li>
+        <li>Water-food: <strong>low</strong></li>
+        <li>Beak <strong>color:</strong> bright blue (pretty!)</li>
+      </ul>
+      <p class="predict">Predict habitat: Wetland or Forest?</p>
+    </div>
+    <div class="card">
+      <h3>Bird 4 — “Hidden Factor”</h3>
+      <ul>
+        <li>Seed: medium</li>
+        <li>Worm: medium</li>
+        <li>Water-food: <strong>high</strong></li>
+        <li>Beak: medium scoop</li>
+      </ul>
+      <p class="predict">Predict habitat: Wetland or Forest?</p>
+    </div>
+  </div>
+  <p class="footer">Student side — no answers</p>
+
+  <div class="page-break">
+    <p class="kicker">Teacher answer key — do not hand to students first</p>
+    <h1>Mystery Birds — Answers</h1>
+    <table>
+      <thead><tr><th>Bird</th><th>Answer</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>1 Reed Sipper</td><td>Wetland</td><td>High water-food + scoop beak matches wetland pattern.</td></tr>
+        <tr><td>2 Needle Bill</td><td>Forest</td><td>High worm / low water matches forest pattern.</td></tr>
+        <tr><td>3 Blue Jewel</td><td>Forest</td><td>Color is noise — scores match forest.</td></tr>
+        <tr><td>4 Hidden Factor</td><td>Forest</td><td>Looks wetland from water score, but nests only in deep forest cavities (hidden factor).</td></tr>
+      </tbody>
+    </table>
+    <p class="footer">Flutterby Field School · Teach the Computer Which Beak Wins</p>
+  </div>
+</body>
+</html>

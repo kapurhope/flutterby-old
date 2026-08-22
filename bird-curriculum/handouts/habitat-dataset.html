@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Habitat Dataset — Module 4</title>
+  <style>
+    @page { size: letter; margin: 0.5in; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #1c2a22; font-family: Georgia, "Times New Roman", serif; font-size: 11pt; line-height: 1.35; }
+    .kicker { margin: 0 0 0.25rem; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #2f6b4f; }
+    h1 { margin: 0 0 0.35rem; font-size: 18pt; }
+    .box { border: 1.5px solid #2f6b4f; background: #f3f7f4; padding: 0.5rem 0.65rem; margin: 0 0 0.65rem; }
+    .box h2 { margin: 0 0 0.25rem; font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color: #1f4a37; text-transform: uppercase; letter-spacing: 0.04em; }
+    h3 { margin: 0.7rem 0 0.3rem; font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #1f4a37; }
+    table { width: 100%; border-collapse: collapse; margin-top: 0.25rem; font-size: 10.5pt; }
+    th, td { border: 1px solid #1c2a22; padding: 0.32rem 0.4rem; text-align: left; }
+    th { background: #dfece6; font-family: Arial, Helvetica, sans-serif; font-size: 9.5pt; }
+    .page-break { page-break-before: always; }
+    .write { border-bottom: 1px solid #1c2a22; min-height: 1.25em; margin: 0.3rem 0; }
+    .footer { margin-top: 0.55rem; font-family: Arial, Helvetica, sans-serif; font-size: 8.5pt; color: #3d5248; }
+  </style>
+</head>
+<body>
+  <p class="kicker">Flutterby Field School · Module 4 · Student sheet</p>
+  <h1>Habitat Detective Dataset</h1>
+  <p><strong>Story:</strong> Scientists checked places for <strong>Azure Warblers</strong> (fictional). <strong>Yes</strong> = nesting pair found.</p>
+
+  <div class="box">
+    <h2>Instructions</h2>
+    <ol style="margin:0;padding-left:1.15rem;">
+      <li>Study the training sites (A–J). Look for patterns.</li>
+      <li>Write a short rule: when do you predict a nest?</li>
+      <li>Predict mystery sites X, Y, and Z <em>before</em> answers are revealed.</li>
+      <li>Discuss what went wrong if your rule fails.</li>
+    </ol>
+  </div>
+
+  <h3>Training sites</h3>
+  <table>
+    <thead><tr><th>Site</th><th>Temp</th><th>Tree cover</th><th>Insects</th><th>Human disturbance</th><th>Nest?</th></tr></thead>
+    <tbody>
+      <tr><td>A</td><td>Cool</td><td>High</td><td>High</td><td>Low</td><td>Yes</td></tr>
+      <tr><td>B</td><td>Hot</td><td>Low</td><td>Low</td><td>High</td><td>No</td></tr>
+      <tr><td>C</td><td>Mild</td><td>High</td><td>High</td><td>Low</td><td>Yes</td></tr>
+      <tr><td>D</td><td>Warm</td><td>Medium</td><td>Medium</td><td>High</td><td>No</td></tr>
+      <tr><td>E</td><td>Cool</td><td>High</td><td>High</td><td>Low</td><td>Yes</td></tr>
+      <tr><td>F</td><td>Mild</td><td>High</td><td>Medium</td><td>Low</td><td>Yes</td></tr>
+      <tr><td>G</td><td>Hot</td><td>Medium</td><td>Low</td><td>Medium</td><td>No</td></tr>
+      <tr><td>H</td><td>Mild</td><td>Low</td><td>High</td><td>Low</td><td>No</td></tr>
+      <tr><td>I</td><td>Cool</td><td>Medium</td><td>High</td><td>Medium</td><td>No</td></tr>
+      <tr><td>J</td><td>Mild</td><td>High</td><td>High</td><td>Medium</td><td>Yes</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Our rule</h3>
+  <p class="write"></p>
+
+  <h3>Mystery sites — predict first</h3>
+  <table>
+    <thead><tr><th>Site</th><th>Temp</th><th>Tree cover</th><th>Insects</th><th>Human disturbance</th><th>Our prediction</th></tr></thead>
+    <tbody>
+      <tr><td>X</td><td>Cool</td><td>High</td><td>High</td><td>Low</td><td></td></tr>
+      <tr><td>Y</td><td>Hot</td><td>High</td><td>High</td><td>Low</td><td></td></tr>
+      <tr><td>Z</td><td>Mild</td><td>High</td><td>High</td><td>High</td><td></td></tr>
+    </tbody>
+  </table>
+  <p class="footer">Student side — mystery answers on page 2 (teacher)</p>
+
+  <div class="page-break">
+    <p class="kicker">Teacher key — reveal after votes</p>
+    <h1>Mystery Site Answers</h1>
+    <table>
+      <thead><tr><th>Site</th><th>Nest?</th><th>Teaching note</th></tr></thead>
+      <tbody>
+        <tr><td>X</td><td>Yes</td><td>Fits the cool/high cover/high insects/low disturbance pattern.</td></tr>
+        <tr><td>Y</td><td>No</td><td>Too hot — temperature matters even with good cover.</td></tr>
+        <tr><td>Z</td><td>Yes</td><td>Exception: high disturbance but nest boxes in a busy park (hidden factor).</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Facilitation tips:</strong> Students often ignore site H (insects high but cover low) and site J (medium disturbance still OK). Use Z to launch “model ≠ reality.”</p>
+    <p class="footer">Flutterby Field School · Habitat Detective</p>
+  </div>
+</body>
+</html>

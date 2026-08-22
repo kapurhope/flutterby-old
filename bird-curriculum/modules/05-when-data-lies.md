@@ -1,5 +1,5 @@
 # Module 5 — When Data Lies
-**Time:** 45–55 min · **Mode:** Hands-on + discussion · **Handouts:** `handouts/biased-dataset.md`, optional bird ID “trick” cards
+**Time:** 45–55 min · **Mode:** Hands-on + discussion · **Handouts:** `handouts/biased-dataset.pdf`, optional bird ID “trick” cards
 
 ## Hook (3 min)
 “Yesterday’s AI was pretty good. Today we feed it **bad data** on purpose.”

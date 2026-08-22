@@ -27,10 +27,10 @@ Ask: “If you were a computer, what **rule** predicts habitat?”
 
 Example student rule: *If Water score ≥ 18 → Wetland; else Forest.*
 
-Students write rules on `handouts/rule-card.md`.
+Students write rules on `handouts/rule-card.pdf`.
 
 ## Step 2 — Mystery birds (10 min)
-Use `handouts/mystery-birds.md`. Groups predict habitat; class votes; reveal.
+Use `handouts/mystery-birds.pdf`. Groups predict habitat; class votes; reveal.
 
 ## Step 3 — Choose features (10 min)
 List on board: beak length, beak width, **beak color**, wing length, seed score, worm score, habitat temperature…
