@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Module 2 Teacher Training — Hungry Bird Robot</title>
+  <style>
+    @page { size: letter; margin: 0.55in; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #1c2a22; font-family: Georgia, "Times New Roman", serif; font-size: 10.5pt; line-height: 1.35; }
+    .kicker { margin: 0 0 0.2rem; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #2f6b4f; }
+    h1 { margin: 0 0 0.35rem; font-size: 17pt; letter-spacing: -0.02em; }
+    h2 { margin: 0.7rem 0 0.3rem; font-family: Arial, Helvetica, sans-serif; font-size: 11pt; color: #1f4a37; text-transform: uppercase; letter-spacing: 0.03em; }
+    h3 { margin: 0.55rem 0 0.2rem; font-family: Arial, Helvetica, sans-serif; font-size: 10.5pt; color: #1f4a37; }
+    p, li { margin: 0.25rem 0; }
+    ul, ol { margin: 0.2rem 0 0.4rem; padding-left: 1.15rem; }
+    .box { border: 1.5px solid #2f6b4f; background: #f3f7f4; padding: 0.45rem 0.6rem; margin: 0.4rem 0 0.55rem; }
+    .say { background: #fff; border-left: 3px solid #c47a1a; padding: 0.35rem 0.55rem; margin: 0.3rem 0; font-style: italic; }
+    table { width: 100%; border-collapse: collapse; margin: 0.35rem 0; font-size: 9.5pt; }
+    th, td { border: 1px solid #1c2a22; padding: 0.28rem 0.35rem; text-align: left; vertical-align: top; }
+    th { background: #dfece6; font-family: Arial, Helvetica, sans-serif; }
+    .footer { margin-top: 0.5rem; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: #3d5248; }
+    .page-break { page-break-before: always; }
+  </style>
+</head>
+<body>
+  <p class="kicker">FlockQuest · Module 2 · Teacher training</p>
+  <h1>The Hungry Bird Robot</h1>
+  <p><strong>Time:</strong> 35–40 min &nbsp;·&nbsp; <strong>After:</strong> Module 1 beak races (spoon, tweezers, fork)</p>
+
+  <div class="box">
+    <strong>Learning goal (students):</strong> A robot only knows the examples we give it. If the examples are incomplete, its rule can be wrong.
+  </div>
+
+  <h2>Learning points (teachers)</h2>
+  <ol>
+    <li><strong>AI = a rule from examples</strong> — not magic.</li>
+    <li><strong>Test on something new</strong> — a mystery bird the robot hasn’t “seen.”</li>
+    <li><strong>Bias can mean incomplete data</strong> — spoon-only sample skews the lesson.</li>
+    <li><strong>Humans are responsible</strong> for the lesson the AI got.</li>
+  </ol>
+  <p><strong>Do not</strong> invent a silly rule just to tear it down. If a student offers a looks/color shortcut, you may test it as an optional add-on only.</p>
+
+  <h2>Lesson arc</h2>
+  <ol>
+    <li>Hungry-bird question + fair rule from scores</li>
+    <li>Test on a mystery bird (Robot follows the card)</li>
+    <li>Unfair sample (only spoon data) → rule breaks</li>
+    <li>Ask: “Did the robot fail, or did we give it a bad / incomplete lesson?”</li>
+  </ol>
+
+  <h2>What to say — step by step</h2>
+
+  <h3>Hook (2 min)</h3>
+  <p class="say">“Yesterday we were birds hunting for food. Today you’ll build a tiny AI — a robot that decides where a hungry bird should go for the most food: a wet place or a forest. The robot is not smart by itself. It only follows a rule we write from numbers.”</p>
+  <p>Optional: choose one volunteer as the Robot. They may only read their index card later.</p>
+
+  <h3>1) Fair rule (8–10 min)</h3>
+  <p class="say">“If you were a robot, and you could only look at these numbers, what rule would you use to decide where the hungry bird should go for the most food — a wet place or a forest?”</p>
+  <table>
+    <thead><tr><th>Beak</th><th>Seeds</th><th>Worms</th><th>Water food</th></tr></thead>
+    <tbody>
+      <tr><td>Spoon</td><td>6</td><td>2</td><td>14</td></tr>
+      <tr><td>Tweezers</td><td>3</td><td>15</td><td>1</td></tr>
+      <tr><td>Fork</td><td>11</td><td>8</td><td>2</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Students may say:</strong> “High water → wet,” “High worms → forest,” “Spoons go wet.”</p>
+  <p><strong>Guide toward one short rule,</strong> e.g. <em>If Water food ≥ 10 → Wet place. Otherwise → Forest.</em> Write it on the Robot card.</p>
+  <p class="say">“This rule uses the race evidence. That’s a fair lesson for a robot.”</p>
+
+  <h3>2) Test mystery bird (8 min)</h3>
+  <p class="say">“Here’s a new bird. No vibes. Robot: only use the card.”</p>
+  <p>Example A: Water food 16, Worms 3 → Wet. Example B: Water food 2, Worms 18 → Forest.</p>
+  <p class="say">“Did the robot know birds? No. It matched numbers to a rule. That’s all AI is doing here.”</p>
+
+  <h3>3) Unfair sample (10–12 min)</h3>
+  <p class="say">“Plot twist. Pretend scientists only studied spoons. Cover tweezers and fork. Using ONLY this, what rule would the robot learn?”</p>
+  <p><strong>Students may say:</strong> “Always wet,” “Spoons are best,” “Water food is all that matters.”</p>
+  <p>Uncover other beaks; run spoon-only rule on tweezers — it fails.</p>
+  <p class="say">“The robot isn’t broken. We gave it an incomplete lesson. That’s biased data — an unfair sample.”</p>
+  <p class="say">“Same idea if an AI only sees one neighborhood or one group of people — then its rules fail for everyone else.”</p>
+
+  <h3>4) Close (3–5 min)</h3>
+  <p class="say">“Did the robot fail, or did we give it a bad / incomplete lesson?”</p>
+  <p><strong>Exit ticket:</strong> “Today the AI messed up because ___.”</p>
+
+  <div class="page-break">
+    <p class="kicker">FlockQuest · Module 2 · Teacher training (page 2)</p>
+    <h2>Transitions (keep it natural)</h2>
+    <table>
+      <thead><tr><th>From → To</th><th>Say</th></tr></thead>
+      <tbody>
+        <tr><td>Hook → Fair rule</td><td>“Robots need a rule made from evidence. Let’s build one.”</td></tr>
+        <tr><td>Fair rule → Test</td><td>“A rule isn’t real until we try it on a new bird.”</td></tr>
+        <tr><td>Test → Unfair sample</td><td>“It worked with everyone’s data. What if we hid most of the data?”</td></tr>
+        <tr><td>Unfair sample → Close</td><td>“Who made the mistake — the robot, or the teachers of the robot?”</td></tr>
+      </tbody>
+    </table>
+
+    <h2>If students say…</h2>
+    <table>
+      <thead><tr><th>Student</th><th>You</th></tr></thead>
+      <tbody>
+        <tr><td>“AI is magic / smarter than us”</td><td>“Point to the card. That’s the whole brain today.”</td></tr>
+        <tr><td>Long complicated rule</td><td>“Pick one number the robot can check in 2 seconds.”</td></tr>
+        <tr><td>Blames the Robot student</td><td>“The person isn’t wrong — the lesson we wrote is.”</td></tr>
+        <tr><td>“Just use common sense”</td><td>“Robots don’t get common sense unless we put it in the data/rule.”</td></tr>
+        <tr><td>Offers “yellow / pretty / metal” rule</td><td>Park it; optionally test later — don’t force a silly-rule skit.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Success looks like</h2>
+    <p>A sixth grader can say: <strong>“We can trick an AI by only showing it some results — the robot failed because of our incomplete lesson.”</strong></p>
+
+    <h2>Materials checklist</h2>
+    <ul>
+      <li>Module 1 scores on board (or sample table on lesson page)</li>
+      <li>Student rule cards</li>
+      <li>Robot index card</li>
+      <li>Something to cover tweezers/fork rows</li>
+    </ul>
+
+    <p class="footer">FlockQuest · https://kapurhope.github.io/flutterby/bird-curriculum/module-2.html</p>
+  </div>
+</body>
+</html>

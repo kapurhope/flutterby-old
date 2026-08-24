@@ -1,56 +1,44 @@
-# Module 2 — Teach the Computer Which Beak Wins
-**Time:** 45–55 min · **Mode:** Computer optional (paper first) · **Depends on:** Module 1 data (or sample table below)
+# Module 2 — The Hungry Bird Robot
+**Time:** 35–40 min · **Mode:** Computer optional · **Depends on:** Module 1 beak scores (spoon, tweezers, fork)
 
-Use a projector or shared spreadsheet only to display the class table faster — the “AI” is still the students’ rules.
+## Learning goal
+Students can explain: **A robot only knows the examples we give it. If the examples are incomplete, its rule can be wrong.**
 
-## Hook (3 min)
-“You already made a dataset. Now you *are* the AI.”
+## Learning points (teachers)
+1. AI = a rule from examples — not magic.  
+2. Test on something new (mystery bird).  
+3. Bias can mean incomplete / unfair sample data.  
+4. Humans are responsible for the lesson the AI got.  
 
-## Goals
-- Find patterns that predict a good **habitat** from beak performance.  
-- Predict for mystery birds.  
-- Notice useless features (noise) and wrong predictions.
+**Teacher training PDF:** `handouts/module-2-teacher-training.pdf`
 
-## Step 1 — Pattern hunt (12 min)
-Project or hand out a combined class table, or this sample:
+## Do not
+Invent a “silly rule” just to tear it down. If a student offers a looks/color shortcut, optionally test it later.
 
-| Beak | Seed | Worm | Fruit | Water | Best habitat |
-|------|------|------|-------|-------|--------------|
-| Spoon | 18 | 4 | 12 | 20 | Wetland |
-| Tongs | 12 | 19 | 15 | 5 | Forest |
-| Fork | 7 | 21 | 8 | 3 | Forest |
-| Tweezers | 4 | 17 | 10 | 2 | Forest |
-| Cup | 20 | 2 | 5 | 25 | Wetland |
-| Chopsticks | 8 | 16 | 9 | 4 | Forest |
+## Materials
+- Module 1 scores on board (or sample table)
+- Rule card, Robot index card
+- Optional mystery bird cards
 
-Ask: “If you were a computer, what **rule** predicts habitat?”
+## Procedure
 
-Example student rule: *If Water score ≥ 18 → Wetland; else Forest.*
+### Hook (2 min)
+“Yesterday we hunted for food. Today we build a tiny AI that decides where a hungry bird should go — wet place or forest. The robot only follows a rule we write from numbers.”
 
-Students write rules on `handouts/rule-card.pdf`.
+### 1) Fair rule (8–10 min)
+Ask: “If you were a robot, and you could only look at these numbers, what rule would you use to decide where the hungry bird should go for the most food — a wet place or a forest?”
 
-## Step 2 — Mystery birds (10 min)
-Use `handouts/mystery-birds.pdf`. Groups predict habitat; class votes; reveal.
+Land one short fair rule (e.g. Water food ≥ 10 → Wet; else Forest). Write on Robot card.
 
-## Step 3 — Choose features (10 min)
-List on board: beak length, beak width, **beak color**, wing length, seed score, worm score, habitat temperature…
+### 2) Test mystery bird (8 min)
+Robot reads card only. Class votes; Robot answers. Emphasize: matching numbers to a rule, not “knowing birds.”
 
-Ask: “Which would you give an AI? Which is probably useless?”
+### 3) Unfair sample (10–12 min)
+Cover tweezers/fork. Build spoon-only rule. Uncover; rule fails on tweezers. Name: incomplete lesson / biased sample.
 
-Push: beak color often doesn’t predict food niche — that’s **noise**.
-
-## Step 4 — Bad AI (10 min)
-Show a “model” that always picks Wetland if the bird is *pretty* or *blue*.  
-Or a mystery bird that breaks their rule (high water score but lives in forest because of nesting sites — a **hidden factor**).
-
-Ask: “Did the AI fail, or did we train it with the wrong idea?”
-
-## Wrap (5 min)
-Exit ticket: “One thing AI needs from us is ___.”
-
-## 5th–6th vs 7th–8th
-- Younger: one rule, oral discussion of the trick.  
-- Older: define **feature**, **training examples**, **prediction**; calculate how many mystery birds their rule got right.
+### 4) Close (3–5 min)
+“Did the robot fail, or did we give it a bad/incomplete lesson?”  
+Exit: “Today the AI messed up because ___.”
 
 ## Assessment
-Rule card + 3 mystery predictions + one sentence on a miss.
+Rule card + exit ticket.

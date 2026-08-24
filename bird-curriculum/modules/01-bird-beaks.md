@@ -10,7 +10,9 @@
 - Connect results to **variation → environment → who does well**.
 
 ## Setup
-**Beaks (one per team or rotate):** spoon, fork, chopsticks, clothespin, tweezers, cup  
+**Beaks (one per team or rotate):** spoon, tweezers, fork  
+
+*Why only three?* Clear jobs for sixth graders — scoop (spoon), pick (tweezers), spear/grab (fork) — so Module 2’s “teach the computer” rules stay easy to see. 
 
 **Foods (separate piles):**  
 - Seeds → beans / rice  
