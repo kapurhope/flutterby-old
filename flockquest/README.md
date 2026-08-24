@@ -10,8 +10,8 @@ Open `index.html` in a browser, or after GitHub Pages is on:
 
 ## Goals students juggle
 
-- Nest success ≥ 70  
-- Neighbor peace ≤ Medium  
+- Nest success ≥ 75  
+- Neighbor conflict ≤ Medium  
 - Budget ≤ $100  
 
 Presets, stress events (heat wave, late freeze, bad survey data), and two saved runs for mini-debate.

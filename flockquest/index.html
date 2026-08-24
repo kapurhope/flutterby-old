@@ -21,12 +21,12 @@
     <div class="goals" role="group" aria-label="Conservation goals">
       <div class="goal" data-goal="nest">
         <span class="goal-label">Nest success</span>
-        <span class="goal-target">≥ 70</span>
+        <span class="goal-target">≥ 75</span>
         <span class="goal-value" id="goalNest">—</span>
         <span class="goal-badge" id="badgeNest">?</span>
       </div>
       <div class="goal" data-goal="conflict">
-        <span class="goal-label">Neighbor peace</span>
+        <span class="goal-label">Neighbor conflict</span>
         <span class="goal-target">≤ Medium</span>
         <span class="goal-value" id="goalConflict">—</span>
         <span class="goal-badge" id="badgeConflict">?</span>
@@ -81,7 +81,7 @@
           <dd id="statNest">—</dd>
         </div>
         <div>
-          <dt>Neighbor peace</dt>
+          <dt>Neighbor conflict</dt>
           <dd id="statConflict">—</dd>
         </div>
         <div>
@@ -95,7 +95,7 @@
       </dl>
 
       <div class="meter" aria-hidden="true">
-        <div class="meter-label">Nest success toward 70</div>
+        <div class="meter-label">Nest success toward 75</div>
         <div class="meter-track">
           <div class="meter-fill" id="meterFill"></div>
           <div class="meter-mark"></div>
@@ -122,7 +122,7 @@
   </main>
 
   <footer class="foot">
-    <p>Class tip: Hitting nest success alone isn’t enough — neighbors and budget count too. Defend your trade-offs with numbers.</p>
+    <p>Class tip: Hitting nest success alone isn’t enough — keep neighbor conflict at Medium or lower, and stay on budget. Defend your trade-offs with numbers.</p>
   </footer>
 
   <script src="sim.js"></script>

@@ -2,7 +2,7 @@
 **Time:** 50–70 min · **Mode:** Computer-aided (required) · **Sim:** [`flockquest/`](../../flockquest/)
 
 ## Why a website here
-Paper portfolios get static fast. FlockQuest lets pairs flip actions, watch nest success / neighbor peace / budget update live, stress-test with events, and save two runs for debate — same “trade-offs with evidence” muscle as PowerQuest.
+Paper portfolios get static fast. FlockQuest lets pairs flip actions, watch nest success / neighbor conflict / budget update live, stress-test with events, and save two runs for debate — same “trade-offs with evidence” muscle as PowerQuest.
 
 ## Prep
 - Open `flockquest/index.html` locally, or after Pages: `https://kapurhope.github.io/flutterby/flockquest/`
@@ -10,8 +10,8 @@ Paper portfolios get static fast. FlockQuest lets pairs flip actions, watch nest
 - Optional print: `handouts/capstone-scorecard.pdf` for offline notes during debate
 
 ## Goals on the board (match the site)
-1. Nest success ≥ **70**  
-2. Neighbor peace ≤ **Medium**  
+1. Nest success ≥ **75**  
+2. Neighbor conflict ≤ **Medium**  
 3. Budget ≤ **$100**
 
 ## Procedure

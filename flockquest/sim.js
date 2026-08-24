@@ -4,8 +4,8 @@
  */
 
 const BUDGET = 100;
-const NEST_GOAL = 70;
-const BASE_NEST = 30;
+const NEST_GOAL = 75;
+const BASE_NEST = 20;
 
 const CONFLICT_RANK = { Low: 1, Medium: 2, High: 3 };
 
@@ -15,15 +15,15 @@ const ACTIONS = [
     name: "Plant native shrubs",
     help: "More cover and insects for nesting.",
     cost: 40,
-    nest: 25,
+    nest: 22,
     conflict: "Low",
   },
   {
     id: "boxes",
     name: "Add nest boxes",
     help: "Safe spots to raise chicks.",
-    cost: 20,
-    nest: 15,
+    cost: 25,
+    nest: 14,
     conflict: "Low",
   },
   {
@@ -31,22 +31,22 @@ const ACTIONS = [
     name: "Reduce pesticides",
     help: "More insects for chicks to eat.",
     cost: 30,
-    nest: 20,
+    nest: 19,
     conflict: "Medium",
   },
   {
     id: "trail",
     name: "Close trail in nesting season",
     help: "Quiet habitat — some hikers get upset.",
-    cost: 10,
-    nest: 20,
+    cost: 18,
+    nest: 24,
     conflict: "High",
   },
   {
     id: "cats",
     name: "Cats-indoors campaign",
     help: "Fewer surprise predators near nests.",
-    cost: 15,
+    cost: 22,
     nest: 10,
     conflict: "Medium",
   },
@@ -54,8 +54,8 @@ const ACTIONS = [
     id: "surveys",
     name: "Better bird surveys",
     help: "Fixes bad data so you don’t protect the wrong place.",
-    cost: 25,
-    nest: 5,
+    cost: 28,
+    nest: 4,
     conflict: "Low",
     fightsBias: true,
   },
@@ -70,29 +70,32 @@ const EVENTS = {
   },
   heat: {
     label: "Heat wave",
-    desc: "Hot days stress chicks. Nest success drops 15 unless you have strong habitat cover (shrubs).",
-    nestDelta: -15,
+    desc: "Hot days stress chicks. Nest success drops 18 unless you have strong habitat cover (shrubs).",
+    nestDelta: -18,
     shrubSoftening: 8,
     requireSurveys: false,
   },
   freeze: {
     label: "Late freeze",
-    desc: "A cold snap hits early nests. Nest success drops 10.",
-    nestDelta: -10,
+    desc: "A cold snap hits early nests. Nest success drops 12.",
+    nestDelta: -12,
     requireSurveys: false,
   },
   bias: {
     label: "Bad survey data",
-    desc: "Your map was biased toward one park. Lose 12 nest points unless you funded better surveys.",
-    nestDelta: -12,
+    desc: "Your map was biased toward one park. Lose 15 nest points unless you funded better surveys.",
+    nestDelta: -15,
     requireSurveys: true,
   },
 };
 
 const PRESETS = {
-  habitat: { shrubs: true, boxes: true, pesticide: false, trail: false, cats: false, surveys: true },
+  // Under nest goal (Low conflict only)
+  habitat: { shrubs: true, boxes: true, pesticide: false, trail: false, cats: false, surveys: false },
+  // Cheaper mix, still short on nests
   people: { shrubs: false, boxes: true, pesticide: true, trail: false, cats: true, surveys: false },
-  balanced: { shrubs: true, boxes: false, pesticide: true, trail: false, cats: false, surveys: true },
+  // Narrow full pass in a calm season (Medium conflict, $5 left)
+  balanced: { shrubs: true, boxes: true, pesticide: true, trail: false, cats: false, surveys: false },
   clear: { shrubs: false, boxes: false, pesticide: false, trail: false, cats: false, surveys: false },
 };
 
@@ -155,7 +158,7 @@ function simulate(levels, eventKey) {
 
 function whyMessage(result) {
   const misses = [];
-  if (!result.passNest) misses.push("nest success is under 70");
+  if (!result.passNest) misses.push("nest success is under " + NEST_GOAL);
   if (!result.passConflict) misses.push("neighbors are at High conflict");
   if (!result.passBudget) misses.push("you went over $100");
 
@@ -284,7 +287,7 @@ function renderHistory() {
       <h4>Run ${i + 1}: ${escapeHtml(run.name)}</h4>
       <ul>
         <li>Nest success: <strong>${run.nest}</strong></li>
-        <li>Neighbor peace: <strong>${run.conflict}</strong></li>
+        <li>Neighbor conflict: <strong>${run.conflict}</strong></li>
         <li>Spent: <strong>$${run.spent}</strong> ($${run.left} left)</li>
         <li>Event: ${escapeHtml(run.eventLabel)}</li>
         <li>Actions: ${escapeHtml(run.chosen.join(", ") || "none")}</li>
